@@ -19,7 +19,8 @@ def index():
 
 class SiteUtils()
     def request_active_covid_cases(self):
-        zakazenia = requests.get()
+        zakazenia = requests.get("https://api.covid19api.com/country/poland")
+        return zakazenia
 # Sprawdzam, czy program jest uruchomiony z tego pliku
 # (Wówczas Python ustawi magiczny parametr __name__ jako "__main__")
 if __name__=="__main__":
