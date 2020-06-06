@@ -1,6 +1,6 @@
-# app.py
 
-from flask import Flask
+from flask import Flask, render_template
+import request
 
 app=Flask(__name__)
 
@@ -13,7 +13,13 @@ def home():
 def hello_you(name):
     return "Witam serdecznie, " + name
 
+@app.route('/index.html')
+def index():
+    return render_template('index.html')
 
+class SiteUtils()
+    def request_active_covid_cases(self):
+        zakazenia = requests.get()
 # Sprawdzam, czy program jest uruchomiony z tego pliku
 # (Wówczas Python ustawi magiczny parametr __name__ jako "__main__")
 if __name__=="__main__":
